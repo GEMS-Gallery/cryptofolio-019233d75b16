@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Crypto Portfolio Tracker</h1>
+        <button id="connectWallet">Connect Wallet</button>
+        <div id="walletInfo" style="display: none;">
+            <p>Connected Address: <span id="address"></span></p>
+            <button id="disconnectWallet">Disconnect Wallet</button>
+        </div>
+        <div id="portfolio" style="display: none;">
+            <h2>Your Portfolio</h2>
+            <table id="tokenTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Symbol</th>
+                        <th>Balance</th>
+                        <th>Price (USD)</th>
+                        <th>Value (USD)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p>Total Portfolio Value: $<span id="totalValue">0.00</span></p>
+        </div>
+        <button id="refreshPortfolio" style="display: none;">Refresh Portfolio</button>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>

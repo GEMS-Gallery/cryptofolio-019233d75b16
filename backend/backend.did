@@ -1,0 +1,15 @@
+type TokenInfo = 
+ record {
+   balance: float64;
+   name: text;
+   price: float64;
+   symbol: text;
+ };
+service : {
+  getTokens: () -> (vec record {
+                          text;
+                          TokenInfo;
+                        });
+  getTotalValue: () -> (float64);
+  updateTokenInfo: (text, text, float64, float64) -> ();
+}
